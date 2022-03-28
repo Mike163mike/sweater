@@ -12,11 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.util.*;
 
 @Controller
-@NoArgsConstructor
 public class RegistrationController {
 
-    @Autowired
-    private UserRepository repository;
+    private final UserRepository repository;
 
     public RegistrationController(UserRepository repository) {
         this.repository = repository;
